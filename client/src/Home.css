@@ -128,3 +128,46 @@
     color: white;
     text-decoration: none;
   }
+
+  .show{
+    color: white;
+  }
+
+  .titre{
+    text-align: center;
+  }
+
+  .img-responsive .centre {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: calc(15px / 2);
+    min-height: 400px;
+    text-align: center;
+   }
+
+   .affiche{
+    margin-top: -200px;
+    height: auto;
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px var(--gray_hard);
+   }
+
+   .fond{
+
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center;
+    width: inherit;
+    height: 300px;
+   }
+
+   .serie{
+    width: auto;
+    border: 1px solid rgb(185, 3, 3);
+    height: auto;
+   }
+
+   .titre{
+    margin-top: -5%;
+   }

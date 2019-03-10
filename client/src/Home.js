@@ -52,7 +52,7 @@ ajouter = (e) =>
         <div class="overlay">
            <h2>{serie.title}</h2>         
         </div>
-        {isLoggedIn ? (
+        {isLoggedIn !== 'false' ? (
             <a class="info" ><i data-key={serie.id} onClick={this.ajouter}class="fas fa-plus-circle plus fa-2x"></i></a>
         ) : (
           null

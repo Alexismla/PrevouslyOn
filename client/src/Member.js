@@ -28,6 +28,7 @@ supprimer = (e) =>
   const token = localStorage.getItem('token');
   axios.delete(`https://api.betaseries.com/shows/show?id=${id}&token=${token}&key=e4c6631861be`)
   .then(function (response) {
+    this.componentDidMount();
     console.log(response);
   })
   .catch(function (error) {
@@ -47,8 +48,12 @@ supprimer = (e) =>
         <div class="overlay">
            <h2>{info.title}</h2>
         </div>
-        <a class="info"><i data-key={info.id} onClick={this.supprimer} class="fas fa-minus-circle plus fa-2x"></i></a>
+        <a href='/member' class="info"><i data-key={info.id} onClick={this.supprimer} class="fas fa-minus-circle plus fa-2x"></i></a>
+        <a href={'/Show/'+ info.id} class="info"><i data-key={info.id} class="fas fa-info-circle plus fa-2x"></i></a>
+        <a href={'/serie/' + info.id} class="info"><i data-key={info.id} class="fas fa-list"></i></a>
+
     </div>
+
       )}
       </div>
       </div>

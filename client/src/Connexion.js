@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
 import axios from 'axios';
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 var md5 = require('md5');
 
 
@@ -25,9 +25,8 @@ connexion = (e) => {
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('id', response.data.user.id);
         localStorage.setItem('logged', true);
-
         // this.props.history.push('/member');
-        
+        window.location.href = '/member'
       })
       .catch(function (error) {
         console.log(error);
@@ -56,7 +55,7 @@ password = (e) => {
         <input type="text" class="form-control" placeholder="Login" onChange={this.login.bind(this)}></input>
         <input type="password" class="form-control" placeholder="password" onChange={this.password.bind(this)}></input>
         <center>
-          <Link to='/member'><button type="submit" class='btn btn-danger btn-lg' onClick={this.connexion.bind(this)}>Connexion</button></Link>
+          <button type="submit" class='btn btn-danger btn-lg' onClick={this.connexion.bind(this)}>Connexion</button>
         </center>
 
       </div>
